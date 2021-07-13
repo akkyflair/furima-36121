@@ -1,0 +1,48 @@
+<mxfile>
+    <diagram id="kn_SRQcrBAxhvkroJaQh" name="ページ1">
+        <mxGraphModel dx="514" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;endArrow=ERmany;endFill=0;strokeWidth=1;jumpSize=5;" parent="1" source="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="users" style="swimlane;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="90" width="190" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Text" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="9">
+                    <mxGeometry x="30" y="80" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="items" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="80" width="180" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;strokeColor=#f0f0f0;strokeWidth=2;" parent="1" source="19" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="475" y="506"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;endArrow=ERone;endFill=0;strokeColor=#f0f0f0;strokeWidth=2;" parent="1" source="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="750" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="170" y="750"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="records" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="470" width="200" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="addresses" style="swimlane;startSize=30;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="560" width="210" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jumpSize=6;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERone;endFill=0;strokeColor=#f0f0f0;strokeWidth=2;" parent="1" source="19" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
