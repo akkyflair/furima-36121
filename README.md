@@ -15,7 +15,7 @@
 
 ## Association
 - has_many :items
-- has_many :records
+- has_many :orders
 
 ## items（商品情報） テーブル
 
@@ -25,17 +25,18 @@
 | price                  | integer    | null: false                    |
 | text                   | text       | null: false                    |
 | user                   | references | null: false, foreign_key: true |
-| category_id            | integer    | null: false                    |
-| status_id              | integer    | null: false                    |
-| delivery_fee_id        | integer    | null: false                    |
-| delivery_prefecture_id | integer    | null: false                    |
-| delivery_date_id       | integer    | null: false                    |
+| category_id            | integer    | null: false                    |ActiveHash
+| status_id              | integer    | null: false                    |ActiveHash
+| delivery_fee_id        | integer    | null: false                    |ActiveHash
+| delivery_prefecture_id | integer    | null: false                    |ActiveHash
+| delivery_date_id       | integer    | null: false                    |ActiveHash
 
 ## Association
 - belongs_to :user
-- has_one :record
+- has_one :order
+- has_one_attached :image
 
-## records テーブル
+## orders(購入記録) テーブル
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
@@ -58,4 +59,4 @@
 | phone          | string     | null: false                    |
 
 ## Association
-- belongs_to :record
+- belongs_to :order
