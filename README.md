@@ -34,7 +34,6 @@
 ## Association
 - belongs_to :user
 - has_one :order
-- has_one_attached :image
 
 ## orders(購入記録) テーブル
 
@@ -57,6 +56,7 @@
 | block          | string     | null: false                    |
 | building       | string     |                                |
 | phone          | string     | null: false                    |
+| order          | references | null: false, foreign_key: true |
 
 ## Association
 - belongs_to :order
