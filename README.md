@@ -28,7 +28,7 @@
 | category_id            | integer    | null: false                    |ActiveHash
 | status_id              | integer    | null: false                    |ActiveHash
 | delivery_fee_id        | integer    | null: false                    |ActiveHash
-| delivery_prefecture_id | integer    | null: false                    |ActiveHash
+| prefecture_id          | integer    | null: false                    |ActiveHash
 | delivery_date_id       | integer    | null: false                    |ActiveHash
 
 ## Association
