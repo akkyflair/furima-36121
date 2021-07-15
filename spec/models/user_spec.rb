@@ -66,7 +66,7 @@ describe User, type: :model do
       end
       it "passwordが全角では登録できない" do
         @user.password = "パスワード"
-        @user.password_confirmation = "パスワードz"
+        @user.password_confirmation = "パスワード"
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is invalid")
       end    
