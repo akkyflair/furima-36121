@@ -1,8 +1,10 @@
 class Item < ApplicationRecord
 extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
-  has_one :order
+  # has_one :order
+  
   has_one_attached :image
+  
   belongs_to_active_hash :category
   belongs_to_active_hash :status
   belongs_to_active_hash :delivery_fee
@@ -13,7 +15,7 @@ extend ActiveHash::Associations::ActiveRecordExtensions
     validates :title, :text, :image
     
     with_options numericality: { other_than: 1 } do
-      validates :category_id, :status_id, :deriveryz_fee_id, :prefecture_id, :delivery_date_id
+      validates :category_id, :status_id, :delivery_fee_id, :prefecture_id, :delivery_date_id
     end
 
     with_options format: { with: /\A[0-9]+\z/ } do
@@ -21,4 +23,3 @@ extend ActiveHash::Associations::ActiveRecordExtensions
     end
   end
 end
-
