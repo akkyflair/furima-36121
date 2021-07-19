@@ -7,7 +7,7 @@ class OrderAddress
     validates :prefecture_id, numericality: { other_than: 0, message: 'は−−以外を選択してください' }
     validates :city
     validates :block
-    validates :phone, format: { with: /\A[0-9]{10,11}\z/, message: 'は数値を入力してください' }
+    validates :phone, format: { with: /\A[0-9]{10,11}\z/, message: 'は数値を11桁で入力してください' }
     validates :user_id
     validates :item_id
     
