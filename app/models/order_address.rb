@@ -3,7 +3,7 @@ class OrderAddress
   attr_accessor :user_id, :item_id, :postcode, :prefecture_id, :city, :block, :building, :phone, :token
 
   with_options presence: true do
-    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'はハイフンを入力してください' }
+    validates :postcode, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'はハイフンを入れて正しい形で入力してください' }
     validates :prefecture_id, numericality: { other_than: 0, message: 'は−−以外を選択してください' }
     validates :city
     validates :block
