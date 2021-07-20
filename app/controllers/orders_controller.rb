@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :create,]
+  before_action :authenticate_user!, only: [:index, :create]
   before_action :set_item, only: [:index, :create]
   before_action :contributor_confirmation, only: [:index, :create]
   before_action :sold_out_item, only: [:index, :create]
@@ -25,8 +25,11 @@ class OrdersController < ApplicationController
   end
 
   private
+
   def order_params
-    params.require(:order_address).permit(:postcode,:prefecture_id, :city, :block, :building, :phone).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
+    params.require(:order_address).permit(:postcode, :prefecture_id, :city, :block, :building, :phone).merge(
+      user_id: current_user.id, item_id: params[:item_id], token: params[:token]
+    )
   end
 
   def set_item
@@ -34,13 +37,10 @@ class OrdersController < ApplicationController
   end
 
   def contributor_confirmation
-    if current_user == @item.user
-      redirect_to root_path 
-    end
+    redirect_to root_path if current_user == @item.user
   end
 
-   def sold_out_item
+  def sold_out_item
     redirect_to root_path if @item.order.present?
-   end
-
+  end
 end
